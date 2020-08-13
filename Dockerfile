@@ -8,5 +8,5 @@ RUN mkdir -p /home/wso2carbon/wso2-artifact-volume
 
 COPY axis2.xml /home/wso2carbon/wso2-config-volume/conf/axis2
 
-RUN /bin/chown wso2carbon:wso2 /home/wso2carbon/wso2-config-volume/conf/axis2.xml
+RUN /bin/chown wso2carbon:wso2 /home/wso2carbon/wso2-config-volume/conf/axis2/axis2.xml
 RUN /bin/chown -R wso2carbon:wso2 /home/wso2carbon/wso2-artifact-volume
