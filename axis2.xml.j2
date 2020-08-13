@@ -497,6 +497,7 @@
             {% endfor %}
         </parameter>
         {% endif %}
+         <parameter name="HostnameVerifier">AllowAll</parameter>
     </transportSender>
     {% endif %}
     {% if transport.jms.sender_enable is defined %}
