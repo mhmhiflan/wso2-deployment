@@ -7,5 +7,5 @@ RUN mkdir -p /home/wso2carbon/wso2-config-volume
 RUN mkdir -p /home/wso2carbon/wso2-artifact-volume
 
 COPY init.sh /home/wso2carbon/
-COPY axis2.xml /home/wso2carbon/wso2-config-volume/conf/axis2/
+COPY axis2.xml /tmp/
 
