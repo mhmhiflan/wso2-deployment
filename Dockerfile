@@ -4,6 +4,7 @@ COPY logger-cap_1.0.0-SNAPSHOT.car /home/wso2carbon/wso2mi-1.1.0/repository/depl
 COPY metadatacreator-cap_1.0.0-SNAPSHOT.car /home/wso2carbon/wso2mi-1.1.0/repository/deployment/server/carbonapps
 COPY account-management-cap_1.0.0-SNAPSHOT.car /home/wso2carbon/wso2mi-1.1.0/repository/deployment/server/carbonapps
 
+COPY deployment.toml /home/wso2carbon/wso2mi-1.1.0/conf
 COPY micro-integrator.sh /home/wso2carbon/wso2mi-1.1.0/bin
 COPY client-truststore.jks /home/wso2carbon/wso2mi-1.1.0/repository/resources/security
 
