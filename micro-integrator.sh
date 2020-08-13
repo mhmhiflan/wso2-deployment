@@ -321,6 +321,7 @@ do
     -Dcom.ibm.cacheLocalHost=true \
     -Dcarbon.use.registry.repo=false \
     -DworkerNode=false \
+    -Dhttpclient.hostnameVerifier=AllowAll \
     -Dorg.apache.cxf.io.CachedOutputStream.Threshold=104857600 \
     -Djavax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom=net.sf.saxon.xpath.XPathFactoryImpl \
     -DavoidConfigHashRead=true \
