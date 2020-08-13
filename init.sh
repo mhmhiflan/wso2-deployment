@@ -20,6 +20,9 @@ set -e
 config_volume=${WORKING_DIRECTORY}/wso2-config-volume
 artifact_volume=${WORKING_DIRECTORY}/wso2-artifact-volume
 
+mkdir -p ${WORKING_DIRECTORY}/wso2-config-volume
+cp /tmp/axis2.xml ${WORKING_DIRECTORY}/wso2-config-volume/conf/axis2/axis2.xml
+
 # capture Docker container IP from the container's /etc/hosts file
 docker_container_ip=$(awk 'END{print $1}' /etc/hosts)
 
@@ -33,8 +36,6 @@ test ! -d ${WSO2_SERVER_HOME} && echo "WSO2 Docker product home does not exist" 
 test -d ${config_volume}/ && cp -RL ${config_volume}/* ${WSO2_SERVER_HOME}/
 # copy any artifact changes mounted to artifact_volume
 test -d ${artifact_volume}/ && cp -RL ${artifact_volume}/* ${WSO2_SERVER_HOME}/
-
-cp /tmp/axis2.xml ${WSO2_SERVER_HOME}/conf/axis2/axis2.xml
 
 # start WSO2 Carbon server
 sh ${WSO2_SERVER_HOME}/bin/micro-integrator.sh "$@"
