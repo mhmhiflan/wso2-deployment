@@ -17,4 +17,5 @@ alias = "symmetric.key.value"
 algorithm = "AES"
 
 [transport.http]
+sender.hostname_verifier = "AllowAll"
 preserve_http_headers = ["Content-Type","Date"]
