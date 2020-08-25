@@ -1,0 +1,31 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: wso2-mi
+spec:
+
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'wso2-mi:1.66'
+  runPolicy: Serial
+  source:
+    git:
+      ref: master
+      uri: 'https://github.com/mhmhiflan/wso2-deployment.git'
+    type: Git
+  strategy:
+    dockerStrategy:
+    type: Docker
+  triggers:
+    - imageChange:
+        lastTriggeredImageID: >-
+          172.30.1.1:5000/wso2/wso2-mi
+      type: ImageChange
+    - type: ConfigChange
+    - generic:
+        secret: be3176bd722bf11d
+      type: Generic
+    - github:
+        secret: bcdd9e63bf255b80
+      type: GitHub
