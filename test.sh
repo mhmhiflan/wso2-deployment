@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo 'Image stream creation started ...'
-oc create -f image-stream-config.yml
+oc apply -f image-stream-config.yml
