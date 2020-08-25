@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'WSO2 micro integrator deployment STARTED...'
-oc project test-hiflan
+oc project wso2
 
 #create WSO2 ConfigMaps
 echo 'Config maps creation started ...'
