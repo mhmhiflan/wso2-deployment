@@ -25,3 +25,8 @@ echo 'Config map creation completed'
 echo 'Image stream creation started ...'
 
 oc apply -f image-stream-config.yml
+
+echo 'Image stream creation completed'
+
+echo 'Deleting previous docker image ...'
+oc tag -d wso2-mi:latest
