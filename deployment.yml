@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: wso2mi-server
-        image: 172.30.139.20:5000/wso2/wso2-mi:latest
+        image: docker-registry.default.svc:5000/wso2/wso2-mi:latest
         imagePullPolicy: IfNotPresent
         securityContext:
           runAsUser: 802
