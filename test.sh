@@ -33,6 +33,7 @@ echo 'Image stream creation completed'
 
 # create mi build
 echo 'Image build started ...'
+oc tag -d wso2-mi:latest
 oc delete -f build-config.yaml
 oc create -f build-config.yaml
 
