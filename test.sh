@@ -37,3 +37,10 @@ echo 'Image build started ...'
 oc create -f build-config.yaml
 
 echo 'Image build completed'
+
+# create mi deployment
+echo 'Micro integrator deployment started ...'
+
+oc create -f deployment.yml
+
+echo 'Micro integrator deployment completed'
