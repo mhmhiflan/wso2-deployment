@@ -7,7 +7,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'wso2-mi:1.66'
+      name: 'wso2-mi:latest'
   runPolicy: Serial
   source:
     git:
