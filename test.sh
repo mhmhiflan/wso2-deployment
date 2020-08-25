@@ -28,5 +28,12 @@ oc apply -f image-stream-config.yml
 
 echo 'Image stream creation completed'
 
-echo 'Deleting previous docker image ...'
-oc tag -d wso2-mi:latest
+#echo 'Deleting previous docker image ...'
+#oc tag -d wso2-mi:latest
+
+# create mi build
+echo 'Image build started ...'
+
+oc create -f build-config.yaml
+
+echo 'Image build completed'
