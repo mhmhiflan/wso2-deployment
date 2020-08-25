@@ -33,13 +33,14 @@ echo 'Image stream creation completed'
 
 # create mi build
 echo 'Image build started ...'
-oc apply -f build-config.yaml
+oc delete -f build-config.yaml
+oc create -f build-config.yaml
 
 echo 'Image build completed'
 
 # create mi deployment
 echo 'Micro integrator deployment started ...'
-
-oc apply -f deployment.yml
+oc delete -f deployment.yml
+oc create -f deployment.yml
 
 echo 'Micro integrator deployment completed'
